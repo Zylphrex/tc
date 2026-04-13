@@ -33,7 +33,7 @@ function loginPage({ errored }) {
             <h1>Date</h1>
             <h2>Please the event date to access the details.</h2>
           </hgroup>
-          ${withError ? `<p>Incorrect password, please try again.</p>` : ""}
+          ${errored ? `<p>Incorrect password, please try again.</p>` : ""}
           ${loginForm()}
         </article>
       </main>
