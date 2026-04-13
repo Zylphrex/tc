@@ -33,10 +33,7 @@ function loginPage() {
             <h1>Date</h1>
             <h2>Please the event date to access the details.</h2>
           </hgroup>
-          <form method="post" action="/login">
-            ${loginForm()}
-            <button type="submit">Enter</button>
-          </form>
+          ${loginForm()}
         </article>
       </main>
     </body>
@@ -60,7 +57,7 @@ function loginForm() {
           })
           .join("")}
       </select>
-      <label for="day">day</label>
+      <label for="day">Day</label>
       <select name="day" id="day">
         ${days
           .map((day) => {
@@ -69,6 +66,7 @@ function loginForm() {
           })
           .join("")}
       </select>
+      <button type="submit">Enter</button>
     </form>
   `;
 }
