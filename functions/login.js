@@ -1,5 +1,6 @@
 export async function onRequestPost(context) {
-  const { env } = context;
+  const { env, request } = context;
+  const body = await request.formData();
   const { date, month } = Object.fromEntries(body);
   const eventDate = `${date}-${month}`;
 
