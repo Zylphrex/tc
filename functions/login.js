@@ -1,4 +1,4 @@
-import { getCookieKeyValue } from "./utils.js";
+import { getCookieKeyValue } from "./util.js";
 
 export async function onRequestPost(context) {
   const { env, request } = context;
