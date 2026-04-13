@@ -1,13 +1,14 @@
 export async function onRequest(context) {
   const { next, request } = context;
-  const { pathname } = new URL(request.url);
+  const { pathname, searchParams } = new URL(request.url);
+  const { error } = Object.fromEntries(searchParams);
   const cookie = request.headers.get("cookie") || "";
 
   if (request.method == "POST" && pathname === "/login") {
     return next();
   }
 
-  return new Response(loginPage(), {
+  return new Response(loginPage({ errored: !!error }), {
     headers: {
       "content-type": "text/html",
       "cache-control": "no-cache",
@@ -15,7 +16,7 @@ export async function onRequest(context) {
   });
 }
 
-function loginPage() {
+function loginPage({ errored }) {
   return `
   <!doctype html>
   <html lang="en">
@@ -25,7 +26,6 @@ function loginPage() {
       <title>Christina & Tony</title>
       <meta name="description" content="Enter the event date to access the details">
     </head>
-
     <body>
       <main>
         <article>
@@ -33,6 +33,7 @@ function loginPage() {
             <h1>Date</h1>
             <h2>Please the event date to access the details.</h2>
           </hgroup>
+          ${withError ? `<p>Incorrect password, please try again.</p>` : ""}
           ${loginForm()}
         </article>
       </main>
@@ -55,7 +56,7 @@ function loginForm() {
             const value = month.toString().padStart(2, "0");
             return `<option value="${value}">${value}</option>`;
           })
-          .join("")}
+          .join("\n")}
       </select>
       <label for="day">Day</label>
       <select name="day" id="day">
@@ -64,7 +65,7 @@ function loginForm() {
             const value = day.toString().padStart(2, "0");
             return `<option value="${value}">${value}</option>`;
           })
-          .join("")}
+          .join("\n")}
       </select>
       <button type="submit">Enter</button>
     </form>
