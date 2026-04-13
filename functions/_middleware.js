@@ -1,11 +1,11 @@
-import { getCookieKeyValue } from "./util.js";
+import { getEventDateCookie } from "./util.js";
 
 export async function onRequest(context) {
   const { env, next, request } = context;
   const { pathname, searchParams } = new URL(request.url);
   const { error } = Object.fromEntries(searchParams);
   const cookie = request.headers.get("cookie") || "";
-  const cookieKeyValue = getCookieKeyValue(env.EVENT_DATE);
+  const cookieKeyValue = getEventDateCookie(env.EVENT_DATE);
 
   if (
     (request.method == "POST" && pathname === "/login") ||

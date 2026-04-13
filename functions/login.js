@@ -1,11 +1,11 @@
-import { getCookieKeyValue } from "./util.js";
+import { getEventDateCookie } from "./util.js";
 
 export async function onRequestPost(context) {
   const { env, request } = context;
   const body = await request.formData();
   const { day, month } = Object.fromEntries(body);
   const eventDate = `${month}-${day}`;
-  const cookieKeyValue = getCookieKeyValue(eventDate);
+  const cookieKeyValue = getEventDateCookie(eventDate);
 
   if (eventDate === env.EVENT_DATE) {
     return new Response("", {
