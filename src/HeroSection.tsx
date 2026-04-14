@@ -60,7 +60,7 @@ export function HeroSection() {
           "object-scale-down",
           "max-h-2/3",
           dropIn,
-          "animation-delay-8",
+          "animation-delay-7",
         )}
       />
       <div
@@ -75,9 +75,19 @@ export function HeroSection() {
           "sm:mb-0",
         )}
       >
-        <span className={classNames("text-center")}>Sat., Sept. 19, 2026</span>
-        <span className={classNames("text-center")}>Richmond Hill, ON</span>
-        <button>RSVP</button>
+        <span
+          className={classNames("text-center", dropIn, "animation-delay-8")}
+        >
+          Sat., Sept. 19, 2026
+        </span>
+        <span
+          className={classNames("text-center", dropIn, "animation-delay-9")}
+        >
+          Richmond Hill, ON
+        </span>
+        <button className={classNames(dropIn, "animation-delay-10")}>
+          RSVP
+        </button>
       </div>
     </Section>
   );
