@@ -65,11 +65,9 @@ export function HeroSection() {
       />
       <div
         className={classNames(
-          "flex",
-          "flex-col",
-          "sm:flex-row",
-          "items-center",
-          "justify-between",
+          "grid",
+          "grid-cols-1",
+          "sm:grid-cols-3",
           "gap-4",
           "w-3/4",
           infoText,
@@ -77,8 +75,8 @@ export function HeroSection() {
           "sm:mb-0",
         )}
       >
-        <span>Saturday, September 19, 2026</span>
-        <span>Richmond Hill, ON</span>
+        <span className={classNames("text-center")}>Sat., Sept. 19, 2026</span>
+        <span className={classNames("text-center")}>Richmond Hill, ON</span>
         <button>RSVP</button>
       </div>
     </Section>
