@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import heroImage from "./assets/hero.jpg";
-import { Section } from "./components/Section";
-import { useDropIn } from "./hooks/useDropIn";
+import { Section } from "./components/Section.tsx";
+import { useDropIn } from "./hooks/useDropIn.tsx";
 
 export function HeroSection() {
   const heroText = classNames(

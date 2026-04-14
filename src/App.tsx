@@ -1,4 +1,4 @@
-import { HeroSection } from "./HeroSection";
+import { HeroSection } from "./HeroSection.tsx";
 
 function App() {
   return (
