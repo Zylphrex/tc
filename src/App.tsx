@@ -1,7 +1,12 @@
 import "./App.css";
+import { HeroSection } from "./sections/HeroSection";
 
 function App() {
-  return <div class="bg-red-500">hello world</div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
 
 export default App;

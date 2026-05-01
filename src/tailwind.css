@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "signature-december";
+  src: url("./assets/fonts/signature-december/Signature December.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-signature-december: "signature-december", cursive;
+  --font-roboto: "roboto", sans-serif;
+}
+
+@theme {
+  --color-surface-primary: #e5e2d6;
+  --color-accent-primary: #939393;
+  --color-accent-secondary: #898989;
+}
