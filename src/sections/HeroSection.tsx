@@ -25,19 +25,6 @@ export function HeroSection() {
         <div
           className={classNames(
             "flex",
-            "flex-col",
-            "px-4",
-            "md:flex-row",
-            "md:px-0",
-          )}
-        >
-          <Polaroid src={hero1} />
-          <Polaroid src={hero2} />
-          <Polaroid src={hero3} />
-        </div>
-        <div
-          className={classNames(
-            "flex",
             "mt-8",
             "gap-4",
             "bold",
@@ -48,6 +35,19 @@ export function HeroSection() {
           <div>Richmond Hill, ON</div>
           <div className={classNames("border-l")} />
           <div>September 19, 2026</div>
+        </div>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "px-4",
+            "md:flex-row",
+            "md:px-0",
+          )}
+        >
+          <Polaroid src={hero1} />
+          <Polaroid src={hero2} />
+          <Polaroid src={hero3} />
         </div>
       </div>
     </Section>
