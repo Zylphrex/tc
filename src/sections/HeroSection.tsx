@@ -6,7 +6,7 @@ import hero1 from "../assets/images/hero-1.jpg";
 
 export function HeroSection() {
   return (
-    <Section id="hero" type="odd">
+    <Section id="hero">
       <h1 className={classNames("text-center")}>Christina & Tony</h1>
       <div
         className={classNames(

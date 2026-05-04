@@ -4,7 +4,7 @@ import { Text } from "../components/Text";
 
 export function TimelineSection() {
   return (
-    <Section id="timeline" type="odd">
+    <Section id="timeline">
       <h2>Timeline</h2>
       <div className={classNames("grid", "grid-cols-[8px_1fr]", "gap-x-8")}>
         <div className={classNames("relative")}>

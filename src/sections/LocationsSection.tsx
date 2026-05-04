@@ -3,7 +3,7 @@ import { Section } from "../components/Section";
 
 export function LocationsSection() {
   return (
-    <Section id="locations" type="even">
+    <Section id="locations">
       <h2>Locations</h2>
       <div className={classNames("grid", "grid-cols-1", "md:grid-cols-2")}>
         <div>Espace Studios</div>
