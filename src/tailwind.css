@@ -1,29 +1,30 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "signature-december";
-  src: url("./assets/fonts/signature-december/Signature December.otf")
-    format("opentype");
+  font-family: "antro-vectra";
+  src: url("./assets/fonts/antro-vectra/Antro_Vectra.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url("./assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: "jmh-typewriter";
+  src: url("./assets/fonts/jmh-typewriter/JMH Typewriter.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-signature-december: "signature-december", cursive;
-  --font-roboto: "roboto", sans-serif;
+  --font-antro-vectra: "antro-vectra", cursive;
+  --font-jmh-typewriter: "jmh-typewriter", serif;
 }
 
 @theme {
   --color-surface-primary: #e5e2d6;
+  --color-surface-secondary: #f6f6f6;
   --color-accent-primary: #939393;
   --color-accent-secondary: #898989;
 }

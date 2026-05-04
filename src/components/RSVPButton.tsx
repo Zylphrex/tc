@@ -4,11 +4,11 @@ export function RSVPButton() {
   return (
     <a
       className={classNames(
-        "bg-transparent",
-        "hover:bg-accent-secondary",
-        "text-accent-primary",
+        // "bg-transparent",
+        "bg-accent-secondary",
+        // "text-accent-primary",
         "font-semibold",
-        "hover:text-surface-primary",
+        "text-surface-primary",
         "py-2",
         "px-4",
         "border",
